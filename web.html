@@ -1,147 +1,218 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style> 
-body{
-    margin: 0;
-    text-align: center;
-}
-.section1{
-  background-image: url("bg.jpg");
-  background-size: cover;
-  background-color: #cccccc;
-  min-height: 500px;
-  width: 100% !important;
-  padding-top: 50px !important;
-}
-.redtext{color:red;
-font-size: 50px}
-.whitetext{color:white;
-font-size: 50px ;
-margin-left: -90px;}
-.Loginbutton{width:200px;
-height:40px !important;
-background-color:red;
-color:white;
-font-size: 15px;}
-.atag{color: white;
-font-size: 17px;
-font-weight: bold;
-text-decoration: none;}
-.header{display:flex;
-justify-content: space-around;
-}
-.header1{width: 40%;}
-.inputbox{width: 300px;
-height: 35px;
-}
-.inputdiv{width:60%}
-.signupbutton{width:200px;
-height:40px !important;
-background-color:red;
-color:white;
-font-size: 15px;
-}
-.middletext{font-size: 50px;
-color: white;
-margin-top: 150px !important;
-margin-bottom: 100px !important;
-margin:auto;
-}
-.section2{
-    padding: 200px;
-    padding-top: 40px;
-}
-.card{width: 30%  !important;
-background-color:#edf4f6;
-font-size: 1.4rem;
-display:inline-block;
-}
-.card:hover{background-color:#d82a4e
-;
-color: white;}
-.content{text-align: left;
-padding: 20px;}
-.logo{display: none;}
-@media only screen and (max-width: 992px) {
-    .atag{display: none;}
-    .logo{display: block;}
-}
-</style>
+    <style>
+        body {
+            margin: 0;
+            text-align: center;
+        }
+        
+        .section1 {
+            background-image: url("bg.jpg");
+            background-size: cover;
+            background-color: #cccccc;
+            min-height: 500px;
+            width: 100% !important;
+            padding-top: 50px !important;
+        }
+        
+        .redtext {
+            color: red;
+            font-size: 50px
+        }
+        
+        .whitetext {
+            color: white;
+            font-size: 50px;
+            margin-left: -90px;
+        }
+        
+        .Loginbutton {
+            width: 200px;
+            height: 40px !important;
+            background-color: red;
+            color: white;
+            font-size: 15px;
+        }
+        
+        .atag {
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .header1 {
+            width: 40%;
+        }
+        
+        .inputbox {
+            width: 300px;
+            height: 35px;
+        }
+        
+        .inputdiv {
+            width: 60%
+        }
+        
+        .signupbutton {
+            width: 200px;
+            height: 40px !important;
+            background-color: red;
+            color: white;
+            font-size: 15px;
+        }
+        
+        .middletext {
+            font-size: 50px;
+            color: white;
+            margin-top: 150px !important;
+            margin-bottom: 100px !important;
+            margin: auto;
+        }
+        
+        .section2 {
+            padding: 150px;
+            padding-top: 40px;
+        }
+        
+        .card-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .card {
+            width: 30% !important;
+            background-color: #edf4f6;
+            font-size: 0.8rem;
+            display: inline-block;
+            min-height: 400px;
+        }
+        
+        .card:hover {
+            background-color: #d82a4e;
+            color: white;
+        }
+        
+        .content {
+            text-align: left;
+            padding: 20px;
+        }
+        
+        .logo {
+            display: none;
+        }
+        
+        @media only screen and (max-width: 992px) {
+            .atag {
+                display: none;
+            }
+            .logo {
+                display: block;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
 
-<div class="section1">
-    <div class = "header">
-<span><span class = "whitetext">web</span><span class="redtext">uni</span></span>
-<div class="header1 header">
-<input type="button" value="Login" class="Loginbutton">
+    <div class="section1">
+        <div class="header">
+            <span><span class = "whitetext">web</span><span class="redtext">uni</span></span>
+            <div class="header1 header">
+                <input type="button" value="Login" class="Loginbutton">
 
-<a class="atag" href="http://">home</a>
-<a class="atag" href="http://">about us</a>
-<a class="atag" href="http://">contact<a>
+                <a class="atag" href="http://">home</a>
+                <a class="atag" href="http://">about us</a>
+                <a class="atag" href="http://">contact<a>
 <a class="atag" href="http://">courses</a>
-<img src="istockphoto-1162440985-170667a.png" width="50" height = 50 class="logo"/>
-</div>
-    </div>
-    <P class="middletext">Get the best free courses!</P>
-<div class="header">
-<div class = "header inputdiv">
-
-    <input class = "inputbox" placeholder = "   Name" type="text" name="Name" id="">
-    <input class = "inputbox" placeholder = "   Email id" type="email" name="Email id" id="">
-</div>
-    <input class = "signupbutton" type="button" value="SignUp">
-
-</div> 
-</div>
-<div class="section2">
-<h1>Our Course Categories</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
-<div class = "card">
-<img src="signup-bg.jpg" alt="" srcset="" width = "100%" height = 250>
-<div class = "content"><h1>our sites</h1>
-<P>We offer the best deals, coupons and offers on millions of products from 1000 Plus Brands in 100 Plus top website like Amazon, Flipkart, Paytm, Zomato, Swiggy, BookMyShow, MakeMyTrip, Yatra etc etc….</P></div>
-
-
-</div>
-<div class = "card">
-    <img src="2.jpg" alt="" srcset="" width = "100%" height = 250>
-    <div class = "content"><h1>Web design</h1>
-    <P>We offer the best deals, coupons and offers on millions of products from 1000 Plus Brands in 100 Plus top website like Amazon, Flipkart, Paytm, Zomato, Swiggy, BookMyShow, MakeMyTrip, Yatra etc etc….</P></div>
-    
-    
-    </div>
-</div>
-<div class = "card">
-    <img src="3.jpg" alt="" srcset="" width = "100%" height = 250>
-    <div class = "content"><h1>Illustration and drawing</h1>
-    <P>We offer the best deals, coupons and offers on millions of products from 1000 Plus Brands in 100 Plus top website like Amazon, Flipkart, Paytm, Zomato, Swiggy, BookMyShow, MakeMyTrip, Yatra etc etc….</P></div>
-    
-    
-    </div>
-    <div class = "card">
-        <img src="6.jpg" alt="" srcset="" width = "100%" height = 250>
-        <div class = "content"><h1>Social media</h1>
-        <P>We offer the best deals, coupons and offers on millions of products from 1000 Plus Brands in 100 Plus top website like Amazon, Flipkart, Paytm, Zomato, Swiggy, BookMyShow, MakeMyTrip, Yatra etc etc….</P></div>
-        
-        
+                <img src="istockphoto-1162440985-170667a.png" width="50" height=50 class="logo" />
+            </div>
         </div>
-</div>
-<div class = "card">
-    <img src="5.jpg" alt="" srcset="" width = "100%" height = 250>
-    <div class = "content"><h1>Cryptocurrencies</h1>
-    <P>We offer the best deals, coupons and offers on millions of products from 1000 Plus Brands in 100 Plus top website like Amazon, Flipkart, Paytm, Zomato, Swiggy, BookMyShow, MakeMyTrip, Yatra etc etc….</P></div>
-    
-    
-    </div>
-    <div class = "card">
-        <img src="6 (2).jpg" alt="" srcset="" width = "100%" height = 250>
-        <div class = "content"><h1>Contact us</h1>
-        <P>We offer the best deals, coupons and offers on millions of products from 1000 Plus Brands in 100 Plus top website like Amazon, Flipkart, Paytm, Zomato, Swiggy, BookMyShow, MakeMyTrip, Yatra etc etc….</P></div>
-        
-        
+        <P class="middletext">Get the best free courses!</P>
+        <div class="header">
+            <div class="header inputdiv">
+
+                <input class="inputbox" placeholder="   Name" type="text" name="Name" id="">
+                <input class="inputbox" placeholder="   Email id" type="email" name="Email id" id="">
+            </div>
+            <input class="signupbutton" type="button" value="SignUp">
+
         </div>
+    </div>
+    <div class="section2">
+        <h1>Our Course Categories</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+        <div class="card-row">
+            <div class="card">
+                <img src="signup-bg.jpg" alt="" srcset="" width="100%" height=150>
+                <div class="content">
+                    <h1>our sites</h1>
+                    <P>We offer the best deals, coupons and offers on millions of products from 1000 Plus Brands in 100 Plus top website like Amazon, Flipkart, Paytm, Zomato, Swiggy, BookMyShow, MakeMyTrip, Yatra etc etc….</P>
+                </div>
+
+
+            </div>
+            <div class="card">
+                <img src="2.jpg" alt="" srcset="" width="100%" height=150>
+                <div class="content">
+                    <h1>Web design</h1>
+                    <P>We offer the best deals, coupons and offers on millions of products from 1000 Plus Brands in 100 Plus top website like Amazon, Flipkart, Paytm, Zomato, Swiggy, BookMyShow, MakeMyTrip, Yatra etc etc….</P>
+                </div>
+
+
+            </div>
+
+            <div class="card">
+                <img src="3.jpg" alt="" srcset="" width="100%" height=150>
+                <div class="content">
+                    <h1>Illustration and drawing</h1>
+                    <P>We offer the best deals, coupons and offers on millions of products from 1000 Plus Brands in 100 Plus top website like Amazon, Flipkart, Paytm, Zomato, Swiggy, BookMyShow, MakeMyTrip, Yatra etc etc….</P>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="card-row">
+            <div class="card">
+                <img src="6.jpg" alt="" srcset="" width="100%" height=150>
+                <div class="content">
+                    <h1>Social media</h1>
+                    <P>We offer the best deals, coupons and offers on millions of products from 1000 Plus Brands in 100 Plus top website like Amazon, Flipkart, Paytm, Zomato, Swiggy, BookMyShow, MakeMyTrip, Yatra etc etc….</P>
+                </div>
+
+
+            </div>
+
+            <div class="card">
+                <img src="5.jpg" alt="" srcset="" width="100%" height=150>
+                <div class="content">
+                    <h1>Cryptocurrencies</h1>
+                    <P>We offer the best deals, coupons and offers on millions of products from 1000 Plus Brands in 100 Plus top website like Amazon, Flipkart, Paytm, Zomato, Swiggy, BookMyShow, MakeMyTrip, Yatra etc etc….</P>
+                </div>
+
+
+            </div>
+            <div class="card">
+                <img src="6 (2).jpg" alt="" srcset="" width="100%" height=150>
+                <div class="content">
+                    <h1>Contact us</h1>
+                    <P>We offer the best deals, coupons and offers on millions of products from 1000 Plus Brands in 100 Plus top website like Amazon, Flipkart, Paytm, Zomato, Swiggy, BookMyShow, MakeMyTrip, Yatra etc etc….</P>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
 </body>
+
 </html>
