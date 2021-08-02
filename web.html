@@ -163,6 +163,8 @@
         
         .profile-details {
             background-color: #edf4f6;
+            text-align: left;
+            padding-left: 10px;
         }
         
         .student-count {
@@ -178,7 +180,20 @@
         .profile-pic {
             width: 100%;
         }
-        
+        .profile-footer {
+            display: flex;
+            text-align: right !important;
+            justify-content: space-around;
+            background-color: #edf4f6;
+            border-top: 1px solid #dee2e6 !important;
+            padding-top: 20px;
+            
+        }
+        .profile-image{
+         width: 80px;
+         height: 80px;
+         border-radius: 50%;
+        }
         @media only screen and (max-width: 992px) {
             .atag {
                 display: none;
@@ -308,8 +323,18 @@
                 <p>Lorem ipsum dolor sit amet, consectetur</p>
                 <p class="student-count">120 Students</p>
             </div>
+            <div class="profile-footer">
+            <img src="6 (2).jpg" alt="" class="profile-image">
+            <div>
+
+                <P>lorem ipsum</P>
+                <P class="student-count">developer</P>
+            </div>
+
+
+            </div>
         </div>
     </div>
 </body>
 
-</html>
+</html> 
