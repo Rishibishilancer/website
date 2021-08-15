@@ -100,7 +100,7 @@
             min-height: 400px;
         }
         
-        .card:hover {
+        .card:hover,.Mysignupbutton:hover {
             background-color: #d82a4e;
             color: white;
         }
@@ -186,6 +186,7 @@
             flex-direction: column;
             padding: 20px;
             padding-left: 32px;
+            margin:auto
         }
         
         .profile-pic {
@@ -212,6 +213,46 @@
          height: 80px;
          border-radius: 50%;
         }
+        .section5{
+            min-height: 600px;
+            display: flex;
+        }
+        .signupsection{
+
+            background-color:#d82a4e;
+            min-width: 50%;
+            min-height: 100%;
+            color:white;
+            text-align: left;
+            padding-left: 5%;
+        }
+        .signupimage{
+            background-image: url("1.jpg");
+            background-size: cover;
+            min-width: 50%;
+            min-height: 100%;
+            opacity: 0.6;
+
+
+        }
+        .signupform{
+            
+            background-color: white;
+            width: 85%;
+            margin: auto;
+            padding-bottom: 60px;
+          
+        }
+        .myinput,.Mysignupbutton{
+
+            margin-left: 60px !important;
+            margin-top: 36px;
+            
+        }
+        .Mysignupbutton{
+
+            background-color: grey;
+        }
         @media only screen and (max-width: 992px) {
             .atag {
                 display: none;
@@ -220,8 +261,23 @@
                 display: block;
             }
             .profile-card{
-                width: 46%;
+                width: 40%;
             }
+
+        }
+        @media only screen and (max-width: 600px) {
+
+            .profile-card{
+                width:90%
+            }
+
+
+        }
+        @media only screen and (max-width: 1700px) and (min-width:992px){
+
+         .profile-card{
+              width:18%
+              }
         }
     </style>
 </head>
@@ -492,6 +548,29 @@
 
             </div>
         </div>
+    </div>
+    <div class="section5">
+    <div class="signupsection">
+<h1>Sign up to become a teacher!</h1>
+<P>
+    lorem em ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
+
+</P>
+
+<div class = "signupform">
+    
+    <input class="inputbox myinput" placeholder="   Your name" type="text" name="Name" id="">
+    <input class="inputbox myinput" placeholder="   Your Email" type="email" name="Name" id="">
+    <input class="inputbox myinput" placeholder="   Your phone" type="text" name="Email id" id="">
+    <input class="signupbutton Mysignupbutton" type="button" value="Upload Course">
+   
+</div>
+    </div>
+    <div class="signupimage">
+
+
+    </div>
+
     </div>
 </body>
 
