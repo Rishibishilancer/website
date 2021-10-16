@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
         body {
             margin: 0;
@@ -375,10 +376,13 @@
         <div class="header">
             <div class="header inputdiv">
 
-                <input class="inputbox" placeholder="   Name" type="text" name="Name" id="">
-                <input class="inputbox" placeholder="   Email id" type="email" name="Email id" id="">
+                <input class="inputbox namebox " placeholder="   Name" type="text" name="Name" id="">
+                <input class="inputbox emailbox" placeholder="   Email id" type="email" name="Email id" id="">
+        
             </div>
-            <input class="signupbutton" type="button" value="SignUp">
+            <input class="signupbutton signin" type="button" value="SignUp">
+            
+
 
         </div>
     </div>
@@ -485,9 +489,14 @@
 
 
     </div>
-
+<div class="options">
+    <button class="btn bg-none rounded-0 flex-grow-1 abc filter-button" data-filter="all">All</button> <button
+        class="btn bg-none rounded-0 flex-grow-1 abc filter-button" data-filter="finance">Finance</button> <button
+        class="btn bg-none rounded-0 flex-grow-1 abc filter-button" data-filter="web">Web Develepment</button> <button
+        class="btn bg-none rounded-0 flex-grow-1 abc filter-button" data-filter="photography">Photography</button>
+</div>
     <div class="section4">
-        <div class="profile-card">
+        <div class="profile-card finance filter">
             <img src="4 (1).jpg" class="profile-pic">
             <div class="profile-details">
                 <h3>IT Development</h3>
@@ -505,7 +514,7 @@
 
             </div>
         </div>
-        <div class="profile-card">
+        <div class="profile-card finance filter">
             <img src="5 (1).jpg" class="profile-pic">
             <div class="profile-details">
                 <h3>IT Development</h3>
@@ -523,7 +532,7 @@
 
             </div>
         </div>
-        <div class="profile-card">
+        <div class="profile-card web filter">
             <img src="3 (1).jpg" class="profile-pic">
             <div class="profile-details">
                 <h3>IT Development</h3>
@@ -541,7 +550,7 @@
 
             </div>
         </div>
-        <div class="profile-card">
+        <div class="profile-card web filter">
             <img src="1 (2).jpg" class="profile-pic">
             <div class="profile-details">
                 <h3>IT Development</h3>
@@ -562,7 +571,7 @@
     </div>
 
     <div class="section4">
-        <div class="profile-card">
+        <div class="profile-card photography filter">
             <img src="5 (1).jpg" class="profile-pic">
             <div class="profile-details">
                 <h3>IT Development</h3>
@@ -580,7 +589,7 @@
 
             </div>
         </div>
-        <div class="profile-card">
+        <div class="profile-card photography filter">
             <img src="5.jpg" class="profile-pic">
             <div class="profile-details">
                 <h3>IT Development</h3>
@@ -598,7 +607,7 @@
 
             </div>
         </div>
-        <div class="profile-card">
+        <div class="profile-card web filter">
             <img src="6 (1).jpg" class="profile-pic">
             <div class="profile-details">
                 <h3>IT Development</h3>
@@ -616,7 +625,7 @@
 
             </div>
         </div>
-        <div class="profile-card">
+        <div class="profile-card finance filter">
             <img src="3 (1).jpg" class="profile-pic">
             <div class="profile-details">
                 <h3>IT Development</h3>
@@ -690,6 +699,35 @@
             <input type="button" value="subscribe" class="signupbutton">
             <div>
             </div>
+            <script> $(document).ready(function () { 
+                $(".Loginbutton").click(function (){
+$(".section2").css("background-color","blue")
+                })
+                $(".signin").click(function (){
+                    if(!$(".namebox").val()&&!$(".emailbox").val()){
+                        alert("please enter both details")
+                    }
+                    else if(!$(".namebox").val()){
+
+                alert("please enter your name")
+                    }else if(!$(".emailbox").val()){
+
+                        alert("please enter your email")
+                    }
+                }
+                
+                )
+                $(".filter-button").click(function () { 
+                    var value = $(this).attr('data-filter'); 
+                    if (value == "all") { 
+                        //$('.filter').removeClass('hidden'); 
+                        $('.filter').show('1000'); } 
+                        else { 
+                            // $('.filter[filter-item="'+value+'"]').removeClass('hidden'); 
+                            // $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden'); 
+                            $(".filter").not('.' + value).hide('3000'); $('.filter').filter('.' + value).show('3000'); } });
+                             if ($(".filter-button").removeClass("active")) { $(this).removeClass("active"); } $(this).addClass("active"); }); 
+                             </script>
 </body>
 
 </html>
