@@ -3,6 +3,7 @@
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <style>
         body {
             margin: 0;
@@ -380,8 +381,10 @@
                 <input class="inputbox emailbox" placeholder="   Email id" type="email" name="Email id" id="">
         
             </div>
-            <input class="signupbutton signin" type="button" value="SignUp">
-            
+            <!-- <input class="signupbutton signin" type="button" value="SignUp"> -->
+            <form method="post">
+                <input type="button" class="signupbutton signin" value="Send Email" onclick="sendEmail()"/>
+            </form> 
 
 
         </div>
@@ -669,7 +672,12 @@
 
     </div>
     <div class="section6"></div>
-    <div class="section7">
+    <form action="mailto:rishi@gmail.com" method="POST" enctype="multipart/form-data" name="EmailForm"> Name:<br>
+<input type="text" size="19" name="ContactName"><br><br>Message:<br> 
+<textarea name="ContactCommentt" rows="6″ cols="20″>
+</textarea><br><br> <input type="submit" value="Submit"> </form>
+
+<div class="section7">
 
         <div class="footer">
             <h1>Contact Info</h1>
@@ -699,12 +707,29 @@
             <input type="button" value="subscribe" class="signupbutton">
             <div>
             </div>
-            <script> $(document).ready(function () { 
+            <script>
+           function sendEmail() {
+	Email.send({
+	Host: "smtp.gmail.com",
+	Username : "<sender’s email address>",
+	Password : "<email password>",
+	To : '<recipient’s email address>',
+	From : "<sender’s email address>",
+	Subject : "<email subject>",
+	Body : "<email body>",
+	}).then(
+		message => alert("mail sent successfully")
+	);
+}
+            
+            $(document).ready(function () { 
                 $(".Loginbutton").click(function (){
 $(".section2").css("background-color","blue")
                 })
                 $(".signin").click(function (){
+                    console.log(!$(".namebox").val() && !$(".emailbox").val())
                     if(!$(".namebox").val()&&!$(".emailbox").val()){
+
                         alert("please enter both details")
                     }
                     else if(!$(".namebox").val()){
@@ -713,7 +738,7 @@ $(".section2").css("background-color","blue")
                     }else if(!$(".emailbox").val()){
 
                         alert("please enter your email")
-                    }
+                    } 
                 }
                 
                 )
